@@ -1,2 +1,3 @@
 # Seminario-Tecnico--MobiRota
 Atividade do Seminário do Professor Gabriel
+O MobiRota é um sistema web voltado para micro e pequenos comércios de bairro (como marmitarias, farmácias, padarias e distribuidoras) que realizam entregas locais. De forma muito simples, o sistema funciona como um "organizador inteligente de entregas". O comerciante joga os endereços dos pedidos do dia no sistema, e a plataforma calcula automaticamente a melhor sequência de ruas que o entregador (motoboy) deve seguir. Em vez de o motoboy ir e voltar várias vezes batendo cabeça no trânsito, o sistema desenha uma rota contínua e lógica, fazendo com que ele entregue tudo mais rápido e gastando o mínimo de combustível possível.
