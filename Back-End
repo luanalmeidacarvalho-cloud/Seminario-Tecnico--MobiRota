@@ -1,0 +1,254 @@
+id
+INT
+PK, Auto-incremento
+Identificador único do usuário.
+nome
+VARCHAR(100)
+NOT NULL
+Nome completo do usuário.
+email
+VARCHAR(100)
+NOT NULL, UNIQUE
+Endereço de e-mail (usado para login).
+senha
+VARCHAR(255)
+NOT NULL
+Hash da senha do usuário.
+data_cadastro
+TIMESTAMP
+DEFAULT CURRENT_TIMESTAMP
+Data e hora em que a conta foi criada.2. Tabela: produtos
+Armazena o catálogo de itens disponíveis no sistema.
+
+
+
+
+id
+INT
+PK, Auto-incremento
+Identificador único do produto.
+nome
+VARCHAR(150)
+NOT NULL
+Nome comercial do produto.
+descricao
+TEXT
+Permite NULL
+Detalhamento das características do produto.
+preco
+DECIMAL(10,2)
+NOT NULL
+Preço unitário do produto.
+estoque
+INT
+NOT NULL, DEFAULT 0
+Quantidade disponível em inventário.
+data_adicionado
+TIMESTAMP
+DEFAULT CURRENT_TIMESTAMP
+Registro de quando o produto foi cadastrado.3. Tabela: pedidos
+Registra as vendas ou solicitações feitas pelos usuários.
+
+
+
+
+id
+INT
+PK, Auto-incremento
+Identificador único do pedido.
+usuario_id
+INT
+FK (usuarios.id)
+Identifica qual usuário realizou o pedido.
+data_pedido
+TIMESTAMP
+DEFAULT CURRENT_TIMESTAMP
+Data e hora em que a compra foi fechada.
+status
+VARCHAR(50)
+NOT NULL
+Situação atual (ex: 'Pendente', 'Pago', 'Enviado').
+total
+DECIMAL(10,2)
+NOT NULL
+Valor total da soma dos itens do pedido.4. Tabela: itens_pedido
+Tabela associativa (N para N) que detalha quais produtos estão dentro de cada pedido.
+enableMetaTags: true,
+renderOptions: {
+metronomeEnabled: false,
+transform3dEnabled: false,
+},
+});
+</script>
+
+<div id="container"><div class="css-uwf2km css-fou3uo tailwind"></div></div>
+
+
+
+<noscript data-nosnippet>
+<main style="height: 100vh; width: 100vw; background-color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+<h1 style="font-size: 24px; padding: 8px; color: black">
+This site requires JavaScript
+</h1>
+<p style="font-size: 16px; padding: 8px; color: #00000080">To view this website, enable JavaScript in your browser settings and reload the page.</p>
+<form style="margin-top: 12px;" action="">
+<button type="submit" style="font-size: 14px; color: black; border: 1px solid #0000001a; border-radius: 5px; width: 256px; height: 32px;">
+Reload page
+</button>
+</form>
+</main>
+</noscript>
+</body>
+</html>enableMetaTags: true,
+renderOptions: {
+metronomeEnabled: false,
+transform3dEnabled: false,
+},
+});
+</script>
+
+<div id="container"><div class="css-uwf2km css-fou3uo tailwind"></div></div>
+
+
+
+<noscript data-nosnippet>
+<main style="height: 100vh; width: 100vw; background-color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+<h1 style="font-size: 24px; padding: 8px; color: black">
+This site requires JavaScript
+</h1>
+<p style="font-size: 16px; padding: 8px; color: #00000080">To view this website, enable JavaScript in your browser settings and reload the page.</p>
+<form style="margin-top: 12px;" action="">
+<button type="submit" style="font-size: 14px; color: black; border: 1px solid #0000001a; border-radius: 5px; width: 256px; height: 32px;">
+Reload page
+</button>
+</form>
+</main>
+</noscript>
+</body>
+</html>
+
+
+
+id
+INT
+PK, Auto-incremento
+Identificador único do item do pedido.
+pedido_id
+INT
+FK (pedidos.id)
+Vinclulação com a tabela de pedidos.
+produto_id
+INT
+FK (produtos.id)
+Vinculação com a tabela de produtos.
+quantidade
+INT
+NOT NULL
+Quantidade daquele produto específico no pedido.
+preco_unitario
+DECIMAL(10,2)
+NOT NULL
+Preço do produto no momento exato da compra.v
+
+
+
+
+id
+INT
+PK, Auto-incremento
+Identificador único do usuário.
+nome
+VARCHAR(100)
+NOT NULL
+Nome completo do usuário.
+email
+VARCHAR(100)
+NOT NULL, UNIQUE
+Endereço de e-mail (usado para login).
+senha
+VARCHAR(255)
+NOT NULL
+Hash da senha do usuário.
+data_cadastro
+TIMESTAMP
+DEFAULT CURRENT_TIMESTAMP
+Data e hora em que a conta foi criada.2. Tabela: produtos
+Armazena o catálogo de itens disponíveis no sistema.
+
+
+
+
+id
+INT
+PK, Auto-incremento
+Identificador único do produto.555698
+nome
+VARCHAR(150)
+NOT NULL
+Nome comercial do produto.
+descricao
+TEXT
+Permite NULL
+Detalhamento das características do produto.
+preco
+DECIMAL(10,2)
+NOT NULL
+Preço unitário do produto.
+estoque
+INT
+NOT NULL, DEFAULT 0
+Quantidade disponível em inventário.
+data_adicionado
+TIMESTAMP
+DEFAULT CURRENT_TIMESTAMP
+Registro de quando o produto foi cadastrado.3. Tabela: pedidos
+Registra as vendas ou solicitações feitas pelos usuários.
+
+
+
+
+id
+INT
+PK, Auto-incremento
+Identificador único do pedido.
+usuario_id
+INT
+FK (usuarios.id)
+Identifica qual usuário realizou o pedido.
+data_pedido
+TIMESTAMP
+DEFAULT CURRENT_TIMESTAMP
+Data e hora em que a compra foi fechada.
+status
+VARCHAR(50)
+NOT NULL
+Situação atual (ex: 'Pendente', 'Pago', 'Enviado').
+total
+DECIMAL(10,2)
+NOT NULL
+Valor total da soma dos itens do pedido.4. Tabela: itens_pedido
+Tabela associativa (N para N) que detalha quais produtos estão dentro de cada pedido.
+
+
+
+
+id
+INT
+PK, Auto-incremento
+Identificador único do item do pedido.
+pedido_id
+INT
+FK (pedidos.id)
+Vinclulação com a tabela de pedidos.
+produto_id
+INT
+FK (produtos.id)
+Vinculação com a tabela de produtos.
+quantidade
+INT
+NOT NULL
+Quantidade daquele produto específico no pedido.
+preco_unitario
+DECIMAL(10,2)
+NOT NULL
+Preço do produto no momento exato da compra.
